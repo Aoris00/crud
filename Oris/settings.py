@@ -38,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'oris.urls'
+ROOT_URLCONF = 'Oris.urls'
 
 TEMPLATES = [
     {
@@ -56,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'oris.wsgi.application'
+WSGI_APPLICATION = 'Oris.wsgi.application'
 
 
 # Database
