@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <section class="account-info">
+        <h2 class="h2wo">Your Information</h2>
+        <p><strong>Name:</strong> _________</p>
+        <p><strong>Email:</strong> _________@gmail.com</p>
+        <p><strong>Phone:</strong> #12345</p>
+        <a href="/edit-profile" class="btn">Edit Profile</a>
+    </section>
+    
+    <section class="orders">
+        <h2 class="h2wo">Your Recent Orders</h2>
+        <ul>
+            <li>Order #12345 - <a href="/printorders/12345">View Details</a></li>
+            <li>Order #12346 - <a href="/printorders/12346">View Details</a></li>
+            <li>Order #12347 - <a href="/printorders/12347">View Details</a></li>
+        </ul>
+    </section>
+</div>
+
+{% endblock %}

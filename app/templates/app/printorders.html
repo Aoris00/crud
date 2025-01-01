@@ -1,0 +1,26 @@
+
+{% extends 'app/base.html' %}
+
+{% block content %}
+    
+
+
+<div class="container">
+    <h1>Order #12345 Details</h1>
+    <section class="order-info">
+        <p><strong>Title:</strong> My Document</p>
+        <p><strong>Pages:</strong> 50</p>
+        <p><strong>Print Quality:</strong> High</p>
+        <p><strong>Delivery Address:</strong> ___________</p>
+        <p><strong>Status:</strong> Printed and Shipped</p>
+    </section>
+    
+    <section class="actions">
+        <a href="/paymentdetails" class="btn">View Payment Details</a>
+        <a href="/review" class="btn">Leave a Review</a>
+    </section>
+</div>
+
+
+
+{% endblock content %}

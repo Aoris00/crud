@@ -1,0 +1,46 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+
+
+
+<h1>Documents</h1>
+<a href="{% url 'document_create' %}">Add New Document</a>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>File</th>
+            <th>Pages</th>
+            <th>Print Quality</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for document in documents %}
+        <tr>
+            <td>{{ document.title }}</td>
+            <td>
+                <a href="{{ document.file.url }}">{{ document.file.name }}</a>
+            </td>
+            <td>{{ document.pages }}</td>
+            <td>{{ document.get_print_quality_display }}</td>
+            <td>
+                <a href="{% url 'document_update' document.pk %}">Edit</a>
+                <a href="{% url 'document_delete' document.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    
+</table>
+
+<br><br><br><br><br><br><br>
+
+<a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+
+
+
+
+{% endblock content %}

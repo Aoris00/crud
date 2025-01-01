@@ -1,0 +1,25 @@
+
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <h1>Payment Details</h1>
+    <section class="payment-info">
+        <p><strong>Payment Method:</strong> Gcash</p>
+        <p><strong>Amount:</strong> ₱100.00</p>
+        <p><strong>Transaction ID:</strong> 12345asd</p>
+        <p><strong>Status:</strong> Paid</p>
+    </section>
+    
+    <section class="actions">
+        <a href="/printorders" class="btn">Back to Orders</a>
+        <a href="/myaccount" class="btn">Back to Account</a>
+    </section>
+</div>
+
+
+
+{% endblock %}

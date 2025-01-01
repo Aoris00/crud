@@ -1,7 +1,209 @@
+
+
 h1{
-    color: #98f5f9;
+    color: #000000;
 }
+
+h2{
+    color: #ffffff;
+    margin-left: 350px;
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+}
+
+.h2wo{
+    color: #ffffff;
+    margin-left: 0px;
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+}
+
 .logo{
-    height: 300px;
+    height: 50px;
     width: auto;
+    text-align: center;
+}
+
+/* General styles */
+body {
+    background-image: url('../images/bg.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.btn {
+    background-color: #7c7a17;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #000000; /* Darker shade on hover */
+}
+
+/* Header */
+.header {
+    background-color: #f3f4f6;
+    padding: 0px 0;
+    height: 0px;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+   
+}
+
+.header .contact-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.header .search-bar {
+    flex-grow: 1;
+    display: flex;
+    margin: 0 20px;
+}
+
+.header .search-bar input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.header .search-bar button {
+    padding: 5px 10px;
+    background-color: #dad187;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header .account-actions {
+    font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ccbf46;
+    color: white;
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.navbar ul li {
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    
+}
+
+.navbar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    
+    
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+}
+/* Main content */
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #008000;
+}
+
+.product-details {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 14px;
+    color: #555;
+}
+
+.product-options form {
+    margin-top: 20px;
+}
+
+.product-options form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.product-options form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.product-options form button {
+    padding: 10px 20px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
