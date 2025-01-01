@@ -12,13 +12,6 @@ class HomePageView(TemplateView):
 class AboutPageView(TemplateView):
     template_name = 'app/about.html'
 
-
-
-
-
-
-
-
 class CustomerListView(ListView):
     model = Customer
     template_name = 'app/customer_list.html'

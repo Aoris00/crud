@@ -22,15 +22,10 @@ urlpatterns = [
     path('paymentdetails/', PaymentDetailsPageView.as_view(), name='paymentdetails'),
     path('printorders/', PrintOrdersPageView.as_view(), name='printorders'),
     path('review/', ReviewPageView.as_view(), name='review'),
-
-
-   
     path('customers/', CustomerListView.as_view(), name='customer_list'),
     path('customers/create/', CustomerCreateView.as_view(), name='customer_create'),
     path('customers/<int:pk>/edit/', CustomerUpdateView.as_view(), name='customer_update'),
     path('customers/<int:pk>/delete/', CustomerDeleteView.as_view(), name='customer_delete'),
-
-    
     path('documents/', DocumentListView.as_view(), name='document_list'),
     path('documents/<int:pk>/', DocumentDetailView.as_view(), name='document_detail'),
     path('documents/create/', DocumentCreateView.as_view(), name='document_create'),
