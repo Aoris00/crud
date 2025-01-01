@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+
+
+
+<h1>Document Details</h1>
+<p><strong>Title:</strong> {{ document.title }}</p>
+<p><strong>File:</strong> <a href="{{ document.file.url }}">{{ document.file.name }}</a></p>
+<p><strong>Pages:</strong> {{ document.pages }}</p>
+<p><strong>Print Quality:</strong> {{ document.get_print_quality_display }}</p>
+<p><strong>Delivery Address:</strong> {{ document.delivery_address }}</p>
+<p><strong>Comments:</strong> {{ document.comments }}</p>
+
+
+<a href="{% url 'document_list' %}">Back to Documents List</a>
+<a href="{% url 'document_update' document.id %}">Edit Document</a>
+<a href="{% url 'document_delete' document.id %}">Delete Document</a>
+
+{% endblock %}

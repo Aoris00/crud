@@ -8,7 +8,7 @@ from .views import (
     PrintOrdersPageView,
     ReviewPageView,
     CustomerListView, CustomerCreateView, CustomerUpdateView, CustomerDeleteView,
-    DocumentListView, DocumentCreateView, DocumentUpdateView, DocumentDeleteView,
+    DocumentListView, DocumentDetailView, DocumentCreateView, DocumentUpdateView, DocumentDeleteView,
    
 )
 
@@ -32,6 +32,7 @@ urlpatterns = [
 
     
     path('documents/', DocumentListView.as_view(), name='document_list'),
+    path('documents/<int:pk>/', DocumentDetailView.as_view(), name='document_detail'),
     path('documents/create/', DocumentCreateView.as_view(), name='document_create'),
     path('documents/<int:pk>/edit/', DocumentUpdateView.as_view(), name='document_update'),
     path('documents/<int:pk>/delete/', DocumentDeleteView.as_view(), name='document_delete'),

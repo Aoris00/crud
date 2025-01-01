@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from django.urls import reverse_lazy
-from .models import Customer, Document, PrintOrder, PaymentDetails, Review
-from .forms import CustomerForm, DocumentForm, PrintOrderForm, PaymentDetailsForm, ReviewForm
+from .models import Customer, Document
+from .forms import CustomerForm, DocumentForm
 
 
 class HomePageView(TemplateView):
@@ -47,6 +46,11 @@ class DocumentListView(ListView):
     model = Document
     template_name = 'app/document_list.html'
     context_object_name = 'documents'
+
+class DocumentDetailView(DetailView):
+    model = Document
+    template_name = 'app/document_detail.html'
+    context_object_name = 'document'
 
 class DocumentCreateView(CreateView):
     model = Document
