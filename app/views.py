@@ -19,7 +19,7 @@ class AboutPageView(TemplateView):
 
 
 
-# CRUD for Customer
+
 class CustomerListView(ListView):
     model = Customer
     template_name = 'app/customer_list.html'
@@ -42,7 +42,7 @@ class CustomerDeleteView(DeleteView):
     template_name = 'app/customer_confirm_delete.html'
     success_url = reverse_lazy('customer_list')
 
-# Similarly for Document
+
 class DocumentListView(ListView):
     model = Document
     template_name = 'app/document_list.html'
@@ -64,9 +64,6 @@ class DocumentDeleteView(DeleteView):
     model = Document
     template_name = 'app/document_confirm_delete.html'
     success_url = reverse_lazy('document_list')
-
-# Repeat for PrintOrder, PaymentDetails, and Review in the same pattern.
-
 
 
 class MyAccountPageView(TemplateView):

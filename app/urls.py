@@ -7,13 +7,9 @@ from .views import (
     PaymentDetailsPageView,
     PrintOrdersPageView,
     ReviewPageView,
-    # Repeat for Customer, Document, PrintOrder, PaymentDetails, Review
-   
-)
-from .views import (
     CustomerListView, CustomerCreateView, CustomerUpdateView, CustomerDeleteView,
     DocumentListView, DocumentCreateView, DocumentUpdateView, DocumentDeleteView,
-    # Repeat for PrintOrder, PaymentDetails, Review
+   
 )
 
 
@@ -28,19 +24,19 @@ urlpatterns = [
     path('review/', ReviewPageView.as_view(), name='review'),
 
 
-    # Customer URLs
+   
     path('customers/', CustomerListView.as_view(), name='customer_list'),
     path('customers/create/', CustomerCreateView.as_view(), name='customer_create'),
     path('customers/<int:pk>/edit/', CustomerUpdateView.as_view(), name='customer_update'),
     path('customers/<int:pk>/delete/', CustomerDeleteView.as_view(), name='customer_delete'),
 
-    # Document URLs
+    
     path('documents/', DocumentListView.as_view(), name='document_list'),
     path('documents/create/', DocumentCreateView.as_view(), name='document_create'),
     path('documents/<int:pk>/edit/', DocumentUpdateView.as_view(), name='document_update'),
     path('documents/<int:pk>/delete/', DocumentDeleteView.as_view(), name='document_delete'),
 
-    # Repeat for PrintOrder, PaymentDetails, Review
+ 
     
 
 ]
