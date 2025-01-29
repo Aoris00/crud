@@ -6,7 +6,9 @@
 
 
 <div class="container">
-    <h1>Leave a Review for Order #12345</h1>
+    <h1>Leave a Review</h1>
+    <h1>Thank You!</h1>
+
     
     <form action="/submit-review" method="POST">
         <label for="rating">Rating:</label>
@@ -21,7 +23,7 @@
         <label for="comment">Your Comment:</label>
         <textarea name="comment" id="comment" rows="5" placeholder="Write your review..."></textarea>
         
-        <button type="submit" class="btn">Submit Review</button>
+        <a href="{% url 'review_finished' %}" class="btn">Submit Review</a>
     </form>
 </div>
 

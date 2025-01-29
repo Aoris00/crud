@@ -2,24 +2,20 @@
 
 {% block content %}
 
-
 <div class="container">
     <section class="account-info">
         <h2 class="h2wo">Your Information</h2>
-        <p><strong>Name:</strong> _________</p>
-        <p><strong>Email:</strong> _________@gmail.com</p>
-        <p><strong>Phone:</strong> #12345</p>
-        <a href="/edit-profile" class="btn">Edit Profile</a>
+        <p><strong>Name:</strong> {{ user_name }}</p>
+        <p><strong>Email:</strong> {{ user_email }}</p>
+        <p><strong>Phone:</strong> {{ user_phone }}</p>
     </section>
     
-    <section class="orders">
-        <h2 class="h2wo">Your Recent Orders</h2>
-        <ul>
-            <li>Order #12345 - <a href="/printorders/12345">View Details</a></li>
-            <li>Order #12346 - <a href="/printorders/12346">View Details</a></li>
-            <li>Order #12347 - <a href="/printorders/12347">View Details</a></li>
-        </ul>
-    </section>
+   
 </div>
+<br><br><br>
+<form action="{% url 'logout' %}" method="post" style="display: inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
 
 {% endblock %}

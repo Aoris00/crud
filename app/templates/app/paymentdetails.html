@@ -1,25 +1,43 @@
-
 {% extends 'app/base.html' %}
 
 {% block content %}
 
-
-
 <div class="container">
     <h1>Payment Details</h1>
-    <section class="payment-info">
-        <p><strong>Payment Method:</strong> Gcash</p>
-        <p><strong>Amount:</strong> ₱100.00</p>
-        <p><strong>Transaction ID:</strong> 12345asd</p>
-        <p><strong>Status:</strong> Paid</p>
-    </section>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <section class="payment-info">
+            <label for="payment_method"><strong>Payment Method:</strong></label>
+            <select name="payment_method" id="payment_method" required>
+                <option value="credit_card">Credit Card</option>
+                <option value="gcash">Gcash</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select>
+            <br><br>
+
+            <label for="amount"><strong>Amount:</strong></label>
+            <input type="text" name="amount" id="amount" placeholder="Enter amount" required>
+            <br><br>
+
+            <label for="status"><strong>Status:</strong></label>
+            <select name="status" id="status" required>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="failed">Failed</option>
+            </select>
+        </section>
+        
+        <br>
+        <a href="{% url 'payment_success' %}" class="btn">Submit</a>
+    </form>
     
+    <br><br>
     <section class="actions">
-        <a href="/printorders" class="btn">Back to Orders</a>
-        <a href="/myaccount" class="btn">Back to Account</a>
+        <a href="{% url 'document_list' %}" class="btn">Back to Document</a>
+        <a href="{% url 'myaccount' %}" class="btn">Back to Account</a>
     </section>
 </div>
-
-
 
 {% endblock %}
